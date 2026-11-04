@@ -1,0 +1,41 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.critico {
+  background-color: red;
+}
+
+.alto {
+  background-color: rgb(255, 115, 0);
+  color: black;
+}
+
+.medio {
+  background-color: rgb(247, 243, 5);
+  color: black;
+}
+
+.baixo {
+  background-color: rgba(57, 148, 143, 0.521);
+}
+
+.task button {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 1rem;
+
+  padding: 2px 8px 0px 8px;
+
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.task button:hover {
+  background-color: rgb(165, 161, 161);
+  cursor: pointer;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.2);
+}

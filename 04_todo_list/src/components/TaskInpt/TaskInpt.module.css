@@ -1,0 +1,31 @@
+.containerInptTask {
+  background-color: rgba(119, 14, 122, 0.411);
+  padding: 20px;
+
+  border-radius: 10px;
+}
+
+.InptTasks {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.btnSubmit {
+  display: flex;
+  justify-content: center;
+}
+
+.btnSubmit button {
+  width: 90%;
+  background-color: rgb(0, 128, 0);
+  padding: 5px;
+
+  border: var(--dft-border);
+  border-radius: 5px;
+}
+
+.btnSubmit button:hover {
+  cursor: pointer;
+  background-color: rgb(16, 110, 16);
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,31 @@
+.inptLabel {
+  /* background-color: rgb(119, 119, 116); */
+  margin: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.inptLabel > label {
+  background-color: var(--primary-color);
+
+  position: relative;
+  z-index: 10;
+  padding: 3px 8px 3px 8px;
+
+  border: var(--dft-border);
+  border-radius: 10px;
+}
+
+.inptLabel input,
+.inptLabel select {
+  position: relative;
+  top: -2px;
+  left: 7px;
+
+  background-color: rgb(66, 64, 64);
+  font-size: 0.9rem;
+
+  border: var(--dft-border);
+  border-radius: 3px;
+  padding: 5px 2px 4px 2px;
+}

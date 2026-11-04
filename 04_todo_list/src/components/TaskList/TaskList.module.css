@@ -1,0 +1,10 @@
+.containerTasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background-color: rgba(2, 100, 124, 0.63);
+  padding: 20px;
+
+  border-radius: 10px;
+}
