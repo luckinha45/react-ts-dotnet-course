@@ -5,7 +5,7 @@
 }
 
 .critico {
-  background-color: red;
+  background-color: rgb(238, 59, 59);
 }
 
 .alto {
@@ -22,8 +22,8 @@
   background-color: rgba(57, 148, 143, 0.521);
 }
 
-.task button {
-  background-color: white;
+.btnRm {
+  background-color: rgb(197, 46, 46);
   color: black;
   font-weight: 700;
   font-size: 1rem;
@@ -34,8 +34,29 @@
   border-radius: 3px;
 }
 
-.task button:hover {
-  background-color: rgb(165, 161, 161);
+.btnRm:hover {
+  background-color: rgb(158, 35, 35);
   cursor: pointer;
   box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btnCompleta {
+  background-color: rgb(66, 217, 236);
+  color: black;
+  font-size: 1rem;
+
+  padding: 2px 8px 0px 8px;
+
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.btnCompleta:hover {
+  background-color: rgb(54, 179, 196);
+  cursor: pointer;
+  box-shadow: inset 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.completed {
+  opacity: 0.5;
 }

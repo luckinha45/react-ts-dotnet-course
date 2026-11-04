@@ -6,29 +6,38 @@ export default function useTasks() {
   const [tasks, setTasks] = useState([]);
   // add task
   useEffect(() => {
-    function addTask(task) {
-      console.log("addtask", task);
-      setTasks(prev => [...prev, {...task, id: crypto.randomUUID()}]);
+    function addTask(e) {
+      console.log(tasks);
+      setTasks(prev => [...prev, {...e.detail, id: crypto.randomUUID()}]);
     }
 
-    window.addEventListener('addTask', (e) => addTask(e.target));
+    window.addEventListener('addTask', addTask);
     return () => window.removeEventListener('addTask', addTask);
   }, []);
 
   // remove task
   useEffect(() => {
-    function rmTask(taskId) {
-      setTasks(prev => prev.filter(p => p.id !== taskId));
+    function rmTask(e) {
+      setTasks(prev => prev.filter(p => p.id !== e.detail));
     }
 
-    window.addEventListener('rmTask', (e) => rmTask(e.target));
+    window.addEventListener('rmTask', rmTask);
     return () => window.removeEventListener('rmTask', rmTask);
   }, []);
 
-  // check tasks
+  // toggle completed task
   useEffect(() => {
-    console.log("check tasks", tasks);
-  }, [tasks])
+    function toggCompleted(e) {
+      const { id, completed } = e.detail;
+      setTasks(prev =>
+        prev.map(p => (p.id === id ? { ...p, completed } : p))
+      );
+    }
+
+    window.addEventListener('toggCompleted', toggCompleted);
+    return () => window.removeEventListener('toggCompleted', toggCompleted);
+  }, [])
+
 
   return tasks;
 }

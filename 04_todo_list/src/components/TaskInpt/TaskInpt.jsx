@@ -3,12 +3,11 @@ import InptLabel from "../InptLabel/InptLabel";
 import styles from "./TaskInpt.module.css";
 
 export default function TaskInpt() {
-  const [task, setTask] = useState({title: "", date: "", priority: ""});
+  const [task, setTask] = useState({title: "", date: "", priority: "", completed: false});
 
   function submit(e) {
     e.preventDefault();
-    console.log("b4 addtask", task);
-    window.dispatchEvent(new CustomEvent("addTask", task));
+    window.dispatchEvent(new CustomEvent("addTask", {detail: task, cancelable: true}));
   }
 
   return <form className={styles.containerInptTask} onSubmit={submit}>
