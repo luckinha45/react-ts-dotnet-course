@@ -1,0 +1,13 @@
+.container {
+  margin: 30px;
+  width: fit-content;
+  background-image: url('/pentagram.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+
+.container p {
+  color: yellow;
+  text-align: justify;
+  margin: 5px 0px 5px 0px;
+}

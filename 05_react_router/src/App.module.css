@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.navBar {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background-color: black;
+}
+
+.navBar span a {
+  color: white;
+}
+
+.isActive {
+  color: rgb(240, 32, 32) !important;
+}
+
+.navBar span a:hover {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+  margin: 10px;
+}

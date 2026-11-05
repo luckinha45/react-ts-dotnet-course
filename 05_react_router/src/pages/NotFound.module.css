@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  flex-direction: column;
+
+  flex: 1;
+
+  background-image: url('/liminal.webp');
+  
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container p {
+  font-size: 1.4rem;
+  color: yellow;
+}

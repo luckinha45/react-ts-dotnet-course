@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Redaction+50:ital,wght@0,400;0,700;1,400&display=swap');
+
+body {
+  margin: 0;
+
+  background-color: rgb(59, 18, 18);
+  color: #9cafe2; 
+  
+  font-family: "Redaction 50", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#root {
+  box-sizing: border-box;
+}
