@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 export default function useTasks() {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")) || []);
   // add task
   useEffect(() => {
     function addTask(e) {
@@ -36,7 +36,13 @@ export default function useTasks() {
 
     window.addEventListener('toggCompleted', toggCompleted);
     return () => window.removeEventListener('toggCompleted', toggCompleted);
-  }, [])
+  }, []);
+
+
+  // Salva no LocalStorage qqr alteração no tasks
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
 
   return tasks;

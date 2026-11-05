@@ -7,9 +7,9 @@ export default function Task({id, title, priority, date, completed}) {
     window.dispatchEvent(new CustomEvent("toggCompleted", {detail: {id, completed: !completed}, cancelable: true}));
   }
 
-  return <li className={liStyle}>
+  return <li className={liStyle} onClick={toggCompletar}>
 
-    {completed && <button
+    {/* {completed && <button
       onClick={(e) => toggCompletar()}
       className={styles.btnCompleta}>
         Descompletar
@@ -20,7 +20,7 @@ export default function Task({id, title, priority, date, completed}) {
       className={styles.btnCompleta}>
         Completar
       </button>
-    }
+    } */}
 
     <span> {title} </span>
     <span> {date} </span>
